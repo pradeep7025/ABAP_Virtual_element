@@ -1,0 +1,51 @@
+managed implementation in class ZBP_R_CUSTOM_TAB_7025 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_CUSTOM_TAB_7025 alias ZrCustomTab7025
+persistent table ZCUSTOM_TAB_7025
+extensible
+draft table ZCSTM_TAB_7025_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   UUID,
+   CustomerID,
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( numbering : managed )
+   UUID,
+   CustomerID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZCUSTOM_TAB_7025 corresponding extensible
+  {
+    UUID = UUID;
+    CustomerID = CUSTOMER_ID;
+    Customername = CUSTOMERNAME;
+    Address = ADDRESS;
+    Status = STATUS;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}

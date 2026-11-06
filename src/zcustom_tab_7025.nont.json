@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZCUSTOM_TAB_7025",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZCUSTOM_TAB_7025",
+  "sapObjectType": "ZCUSTOM_TAB_7025",
+  "rootNode": true
+}

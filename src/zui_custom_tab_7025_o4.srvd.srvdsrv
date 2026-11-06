@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_CUSTOM_TAB_7025'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_CUSTOM_TAB_7025'
+  }
+}
+define service ZUI_CUSTOM_TAB_7025_O4 provider contracts odata_v4_ui {
+  expose ZC_CUSTOM_TAB_7025;
+}
